@@ -1,8 +1,23 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackArray;
+
 public class StackFIFO extends stack {
 
-	private stack temp = new stack();
+	public StackFIFO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackFIFO(IStacks stackArray) {
+		super(stackArray);
+		// TODO Auto-generated constructor stub
+	}
+
+	/* W tym wypadku lepszym wyborem będzie StackArray, ponieważ klasa stack używa obiektu StackArray.
+	 * 
+	 */
+	private StackArray temp = new StackArray();
 
 	/* (non-Javadoc)
 	 * @see edu.kis.vh.stacks.stack#pop()

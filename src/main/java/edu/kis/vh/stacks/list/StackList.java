@@ -1,11 +1,16 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.IStacks;
 
-	private static final int LIST_EMPTY = -1;
+public class StackList implements IStacks {
+
 	private Node last;
 
-	public void pushElement(int i) {
+	/**
+	 * @param i
+	 */
+	@Override
+	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -15,23 +20,27 @@ public class StackList {
 		}
 	}
 
-	public boolean empty() {
+	@Override
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	@Override
+	public boolean isFull() {
 		return false;
 	}
 
-	public int peek() {
-		if (empty())
-			return LIST_EMPTY;
+	@Override
+	public int top() {
+		if (isEmpty())
+			return EMPTY;
 		return last.getValue();
 	}
 
+	@Override
 	public int pop() {
-		if (empty())
-			return LIST_EMPTY;
+		if (isEmpty())
+			return EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;

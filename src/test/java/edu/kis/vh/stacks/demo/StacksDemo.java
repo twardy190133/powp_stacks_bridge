@@ -3,6 +3,7 @@ package edu.kis.vh.stacks.demo;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.StacksFactory;
 
 //Linie w których były błędy: 19-27
 //Kombinacja Alt + <- przenosi do poprzednio edytowanego pliku (wstecz). 
@@ -12,13 +13,13 @@ import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
+		StacksFactory factory = new StacksFactory();
 
 		testStacks(factory);
 
 	}
 
-	private static void testStacks(DefaultStacksFactory factory) {
+	private static void testStacks(StacksFactory factory) {
 		stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
 				factory.GetHanoiStack() };
 
