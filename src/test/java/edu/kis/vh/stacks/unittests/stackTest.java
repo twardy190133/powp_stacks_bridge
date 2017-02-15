@@ -38,7 +38,7 @@ public class stackTest {
 		IStacks stackArray = new StackArray();
 		stack stackObj = new stack(stackArray);
 		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		for (int i = 0; i < (STACK_CAPACITY-1); i++) {
 			boolean result = stackObj.isFull();		
 			Assert.assertEquals(false, result);
 			stackObj.push(888);

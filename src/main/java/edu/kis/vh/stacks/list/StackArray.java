@@ -3,11 +3,12 @@ package edu.kis.vh.stacks.list;
 import edu.kis.vh.stacks.IStacks;
 
 public class StackArray implements IStacks {
-	private static final int STACK_FULL = 11;
-
+	
 	private static final int STACK_SIZE = 12;
+	
+	private static final int STACK_FULL = STACK_SIZE - 1;
 
-	private int[] ITEMS = new int[STACK_SIZE];
+	private int[] items = new int[STACK_SIZE];
 
 	private int total = EMPTY;
 
@@ -21,7 +22,7 @@ public class StackArray implements IStacks {
 	@Override
 	public void push(int i) {
 		if (!isFull())
-			ITEMS[++total] = i;
+			items[++total] = i;
 	}
 
 	/* (non-Javadoc)
@@ -47,7 +48,7 @@ public class StackArray implements IStacks {
 	public int top() {
 		if (isEmpty())
 			return EMPTY;
-		return ITEMS[total];
+		return items[total];
 	}
 
 	/* (non-Javadoc)
@@ -57,6 +58,6 @@ public class StackArray implements IStacks {
 	public int pop() {
 		if (isEmpty())
 			return EMPTY;
-		return ITEMS[total--];
+		return items[total--];
 	}
 }
