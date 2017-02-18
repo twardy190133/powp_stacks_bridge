@@ -15,7 +15,7 @@ public interface IStacks {
 	 *  
 	 */
 
-	int EMPTY = 0;
+	static final int STACK_EMPTY = -1;
 	/**
 	 * @param i
 	 * @return void

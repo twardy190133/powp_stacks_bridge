@@ -52,10 +52,9 @@ public class stackTest {
 	public void testTop() {
 		IStacks stackArray = new StackArray();
 		stack stackObj = new stack(stackArray);
-		final int EMPTY_STACK_VALUE = 0;
 		
 		int result = stackObj.top();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IStacks.STACK_EMPTY, result);
 		
 		int testValue = 4;
 		stackObj.push(testValue);
@@ -70,10 +69,9 @@ public class stackTest {
 	public void testPop() {
 		IStacks stackArray = new StackArray();
 		stack stackObj = new stack(stackArray);
-		final int EMPTY_STACK_VALUE = 0;
 		
 		int result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IStacks.STACK_EMPTY, result);
 		
 		int testValue = 4;
 		stackObj.push(testValue);
@@ -81,7 +79,7 @@ public class stackTest {
 		result = stackObj.pop();
 		Assert.assertEquals(testValue, result);
 		result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IStacks.STACK_EMPTY, result);
 	}
 
 }

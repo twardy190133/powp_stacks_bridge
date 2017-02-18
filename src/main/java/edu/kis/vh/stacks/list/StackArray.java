@@ -10,7 +10,7 @@ public class StackArray implements IStacks {
 
 	private int[] items = new int[STACK_SIZE];
 
-	private int total = EMPTY;
+	private int total = 0;
 
 	public int getTotal() {
 		return total;
@@ -30,7 +30,7 @@ public class StackArray implements IStacks {
 	 */
 	@Override
 	public boolean isEmpty() {
-		return total == EMPTY;
+		return total == 0;
 	}
 
 	/* (non-Javadoc)
@@ -47,7 +47,7 @@ public class StackArray implements IStacks {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY;
+			return STACK_EMPTY;
 		return items[total];
 	}
 
@@ -57,7 +57,7 @@ public class StackArray implements IStacks {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY;
+			return STACK_EMPTY;
 		return items[total--];
 	}
 }

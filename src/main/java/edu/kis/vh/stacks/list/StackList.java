@@ -7,7 +7,7 @@ public class StackList implements IStacks {
 	private Node last;
 
 	/**
-	 * @param i
+	 * @param i - number to be put on stack
 	 */
 	@Override
 	public void push(int i) {
@@ -33,14 +33,14 @@ public class StackList implements IStacks {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY;
+			return STACK_EMPTY;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY;
+			return STACK_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
